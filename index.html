@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morata Pastelería — Masa madre. Hecho a mano.</title>
+<meta name="description" content="Medialunas, croissants XL, minicakes y scons. Elaborados con masa madre y amor en Villa Rosa, Pilar.">
+<meta name="theme-color" content="#2B120B">
+<link rel="icon" type="image/png" href="assets/img/favicon-morata.png">
+<link rel="preload" as="image" href="assets/img/hero-chocoplomo.jpg">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Símbolos SVG reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14Zm0 0 8-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-moto" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.6"/><circle cx="18" cy="17" r="2.6"/><path d="M8.6 17h6.8l2-6H14l-2 3.5H7.5"/><path d="M14 6h2.5l1 5"/><path d="M3 10.5h5.5"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 16.5v-9h3a2.8 2.8 0 0 1 0 5.6h-3"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 5.5c3-1 5.5-.8 8 1v13c-2.5-1.8-5-2-8-1v-13Z"/><path d="M20 5.5c-3-1-5.5-.8-8 1v13c2.5-1.8 5-2 8-1v-13Z"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 18.5 5.6 15A7.5 7.5 0 1 1 9 18.2l-4.5.3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M5 20v-6.5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2V20"/><path d="M5 15.5c1.2 1 2.3 1 3.5 0s2.3-1 3.5 0 2.3 1 3.5 0 2.3-1 3.5 0"/><path d="M12 11.5V8M12 5.2c.8.6.8 1.6 0 2-.8-.4-.8-1.4 0-2Z"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 19.5s-7.5-4.4-7.5-10A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.3c0 5.6-7.5 10-7.5 10Z" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.2 8.5h13.6l-1 10.2a1.8 1.8 0 0 1-1.8 1.6H8a1.8 1.8 0 0 1-1.8-1.6L5.2 8.5Z"/><path d="M8.8 8.5V7.2a3.2 3.2 0 0 1 6.4 0v1.3"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.5 5.6v12.8a.6.6 0 0 0 .9.5l10.2-6.4a.6.6 0 0 0 0-1L9.4 5.1a.6.6 0 0 0-.9.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6.5" y="5" width="4" height="14" rx="1.2"/><rect x="13.5" y="5" width="4" height="14" rx="1.2"/></g></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5.5 12h13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5.5 12.5 4.2 4.2 8.8-9.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 7h15M9.5 7V5.2c0-.7.5-1.2 1.2-1.2h2.6c.7 0 1.2.5 1.2 1.2V7"/><path d="M6.5 7l.8 11.2c.1.9.8 1.6 1.7 1.6h6c.9 0 1.6-.7 1.7-1.6L17.5 7"/><path d="M10 11v5.5M14 11v5.5"/></g></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <!-- Ramita de lavanda (detalle botánico) -->
+  <symbol id="sprig" viewBox="0 0 80 220">
+    <g fill="none" stroke="#6F7652" stroke-width="1.6" stroke-linecap="round"><path d="M40 218C40 150 38 90 44 14"/><path d="M40 170c-8-6-14-16-15-28M41 140c9-5 15-14 17-25"/></g>
+    <g fill="#A985C4"><ellipse cx="44" cy="12" rx="3.2" ry="7" transform="rotate(8 44 12)"/><ellipse cx="38" cy="26" rx="3.4" ry="7.5" transform="rotate(-28 38 26)"/><ellipse cx="50" cy="28" rx="3.4" ry="7.5" transform="rotate(30 50 28)"/><ellipse cx="37" cy="44" rx="3.6" ry="8" transform="rotate(-30 37 44)"/><ellipse cx="51" cy="46" rx="3.6" ry="8" transform="rotate(30 51 46)"/><ellipse cx="36" cy="63" rx="3.8" ry="8.4" transform="rotate(-32 36 63)"/><ellipse cx="51" cy="65" rx="3.8" ry="8.4" transform="rotate(30 51 65)"/><ellipse cx="36" cy="83" rx="3.6" ry="8" transform="rotate(-30 36 83)"/><ellipse cx="50" cy="85" rx="3.6" ry="8" transform="rotate(30 50 85)"/></g>
+    <g fill="#C9B2D8"><ellipse cx="44" cy="36" rx="2.6" ry="6"/><ellipse cx="44" cy="55" rx="2.8" ry="6.4"/><ellipse cx="43" cy="75" rx="2.8" ry="6.4"/><ellipse cx="42" cy="96" rx="2.6" ry="6"/></g>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <nav id="nav" aria-label="Navegación principal">
+    <a href="/" class="nav-logo" id="navLogo" aria-label="Morata Pastelería — inicio">
+      <img src="assets/img/logo-morata.png" alt="Morata Pastelería" width="360" height="360">
+    </a>
+    <div class="nav-menu" id="nav-menu">
+      <a href="#dest" class="ni">Carta</a>
+      <a href="#pedir" class="ni">Cómo pedir</a>
+      <a href="#tienda" class="ni">Tienda</a>
+      <a href="#testi" class="ni">Reseñas</a>
+      <a href="#encargo" class="ni">Encargos</a>
+      <a href="https://www.pedidosya.com.ar/restaurantes/pilar/pasteleria-morata-82e0938b-acdf-4d14-b270-24671cd1322e-menu" target="_blank" rel="noopener noreferrer" class="ni ni-py"><svg class="ico" aria-hidden="true"><use href="#i-moto"/></svg>PedidosYa</a>
+    </div>
+    <button class="nav-cart" id="cartBtn" type="button" data-cart-open aria-label="Abrir carrito, 0 productos" aria-haspopup="dialog" aria-controls="cart" aria-expanded="false">
+      <svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>
+      <span class="cart-count" data-cart-count aria-hidden="true" hidden>0</span>
+    </button>
+    <a href="https://wa.me/5491126352428?text=Hola%20Morata!%20%F0%9F%8E%82%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" class="nc">Hacer pedido <span aria-hidden="true">→</span></a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO (shader Melted Chocolate) ============ -->
+<section id="hero" class="hero" aria-label="Morata. Hecho a mano.">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div id="cur" class="choco-cursor" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-copy">
+      <div class="h-ey"><span class="st" aria-hidden="true">★★★★★</span> 5.0 en Google · 16 reseñas</div>
+      <h1 class="h1">MORATA.<br><em>Hecho a mano.</em></h1>
+      <p class="h-sub">Medialunas, croissants XL, minicakes y scons. Elaborados con masa madre y amor en Villa Rosa, Pilar.</p>
+      <div class="h-ctas">
+        <a href="#" onclick="openModal();return false;" class="btn btn-p">Hacer mi pedido <span aria-hidden="true">→</span></a>
+        <a href="#carta" class="btn btn-ghost">Ver la carta</a>
+      </div>
+      <div class="h-bdgs">
+        <div class="h-bdg"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Confirmamos en 2 horas</div>
+        <div class="h-bdg"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg>Línea sin TACC</div>
+        <a href="https://www.pedidosya.com.ar/restaurantes/pilar/pasteleria-morata-82e0938b-acdf-4d14-b270-24671cd1322e-menu" target="_blank" rel="noopener noreferrer" class="h-bdg"><svg class="ico" aria-hidden="true"><use href="#i-moto"/></svg>PedidosYa</a>
+        <a href="https://www.instagram.com/morata.pasteleria?igsh=cGt5d2xvMzFhdzBs" target="_blank" rel="noopener noreferrer" class="h-bdg"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>@morata.pasteleria</a>
+      </div>
+    </div>
+    <figure class="hero-photo" id="heroImg">
+      <img src="assets/img/hero-chocoplomo.jpg" alt="Porción de Chocoplomo: mousse de chocolate, ganache, brownie y frutos secos" width="1100" height="1100" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SOCIAL PROOF ============ -->
+<div id="proof">
+  <div class="pf-in wrap">
+    <div class="pf-it"><span class="st" aria-hidden="true">★★★★★</span> <strong>5.0</strong> — 16 reseñas Google</div>
+    <div class="pf-it"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Complejo 46 Plaza, Villa Rosa, Pilar</div>
+    <div class="pf-it"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>Lun–Sáb 8:00–19:00 · Dom 9:00–18:00</div>
+    <div class="pf-it"><svg class="ico" aria-hidden="true"><use href="#i-park"/></svg>Estacionamiento gratuito</div>
+    <a href="https://www.pedidosya.com.ar/restaurantes/pilar/pasteleria-morata-82e0938b-acdf-4d14-b270-24671cd1322e-menu" target="_blank" rel="noopener noreferrer" class="pf-it pf-link"><svg class="ico" aria-hidden="true"><use href="#i-moto"/></svg>Disponible en PedidosYa →</a>
+  </div>
+</div>
+
+<!-- ============ PRODUCTOS ESTRELLA ============ -->
+<section id="dest" class="sec">
+  <svg class="sprig sprig-dest" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <div class="dest-top">
+      <div class="dest-intro">
+        <p class="eyebrow rv">Productos estrella</p>
+        <h2 class="s2 s2-xl rv d1">Lo que nuestros clientes piden <em>de nuevo</em></h2>
+        <a href="#carta" class="link-arrow rv d2">Ver carta completa <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <article class="feature rv d1">
+        <div class="feature-img">
+          <img src="assets/img/productos/mini-mousse.jpg" alt="Mini Mousse Morata" width="800" height="600" decoding="async">
+        </div>
+        <div class="feature-b">
+          <p class="p-tag">Minicakes</p>
+          <h3 class="p-name p-name-lg">Mousse</h3>
+          <p class="p-desc">Base marquise de chocolate, dulce de leche y crema chantilly · 8cm</p>
+          <p class="p-price">$12.000</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="pgrid">
+      <article class="pcard rv">
+        <div class="pcard-img">
+          <img src="assets/img/productos/croissant-xl.jpg" alt="Croissant XL de masa madre" width="800" height="600" loading="lazy" decoding="async">
+          <span class="badge">Masa Madre</span>
+        </div>
+        <div class="pcard-b">
+          <p class="p-tag">Panadería de autor</p>
+          <h3 class="p-name">Croissant XL de masa madre</h3>
+          <p class="p-price">$3.000</p>
+          <p class="p-desc">"El croissant de masa madre y el iced mocha: ¡ESPECTACULAR!" — Rodo A, Local Guide</p>
+        </div>
+      </article>
+      <article class="pcard rv d1">
+        <div class="pcard-img">
+          <img src="assets/img/productos/budin-limon.jpg" alt="Budín de limón" width="800" height="600" loading="lazy" decoding="async">
+        </div>
+        <div class="pcard-b">
+          <p class="p-tag">Budines artesanales</p>
+          <h3 class="p-name">Budín de limón</h3>
+          <p class="p-price">$12.000</p>
+          <p class="p-desc">"Es espectacular. ¡Volvemos!" — Natalia E.</p>
+        </div>
+      </article>
+      <article class="pcard rv d2">
+        <div class="pcard-img">
+          <img src="assets/img/productos/scons-albahaca-queso.jpg" alt="Scons de albahaca y queso" width="800" height="599" loading="lazy" decoding="async">
+          <span class="badge">Se hornean al pedido</span>
+        </div>
+        <div class="pcard-b">
+          <p class="p-tag">Scons artesanales</p>
+          <h3 class="p-name">Scons de albahaca y queso</h3>
+          <p class="p-price">$1.400 c/u · promo 6x $8.000</p>
+          <p class="p-desc">Los que nadie puede comer uno solo.</p>
+        </div>
+      </article>
+      <article class="pcard rv d3">
+        <div class="pcard-img">
+          <img src="assets/img/productos/mini-tentacion.jpg" alt="Mini Tentación" width="800" height="600" loading="lazy" decoding="async">
+          <span class="badge badge-star">★ Premium</span>
+        </div>
+        <div class="pcard-b">
+          <p class="p-tag">Minicake 12cm</p>
+          <h3 class="p-name">Mini Tentación</h3>
+          <p class="p-price">$13.500</p>
+          <p class="p-desc">Nuez sin harina, DDL, frutos del bosque. "Fantástica." — Ailen R.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA EXPERIENCIA MORATA (video) ============ -->
+<section id="experiencia" class="sec sec-video" aria-labelledby="video-title">
+  <svg class="sprig sprig-video" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <div class="vid-head">
+      <p class="eyebrow rv">La experiencia Morata</p>
+      <h2 class="s2 rv d1" id="video-title">Hay momentos que se disfrutan <em>sin apuro.</em></h2>
+      <p class="vid-sub rv d2">Un buen café, algo rico y tiempo para compartir. Así se viven los pequeños momentos en Morata.</p>
+    </div>
+    <figure class="vid-frame rv d2" id="vidFrame">
+      <video id="expVideo" class="vid" muted loop playsinline preload="metadata" width="1280" height="720"
+             poster="assets/video/morata-experiencia-poster.jpg"
+             aria-label="Video de ambiente: se sirve un café en una taza de cerámica y distintas personas disfrutan de un momento tranquilo en el salón de Morata.">
+        <source src="assets/video/morata-experiencia.mp4" type="video/mp4">
+      </video>
+      <button class="vid-ctl" id="vidToggle" type="button" aria-pressed="false" aria-label="Reproducir video">
+        <svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>
+        <span class="vid-ctl-t">Reproducir</span>
+      </button>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ TORTAS ============ -->
+<section id="tortas" class="sec sec-tortas" aria-labelledby="tortas-title">
+  <div class="wrap wrap-wide">
+    <div class="t-hero rv">
+      <img class="t-hero-img" src="assets/img/tortas-hero.jpg" alt="Torta de chocolate con mousse y trozos de brownie sobre base de mármol, con lavandas" width="2172" height="724" loading="lazy" decoding="async">
+      <div class="t-hero-copy">
+        <p class="eyebrow eyebrow-line">Nuestras creaciones</p>
+        <h2 class="t-title" id="tortas-title">Tortas</h2>
+        <p class="t-sub">Cada torta tiene su historia. Elegís el sabor, el tamaño y la ocasión — nosotros nos encargamos del resto.</p>
+      </div>
+      <p class="t-aside">Tortas protagonistas —<br>Para celebrar en grande <span class="t-orn" aria-hidden="true"></span></p>
+    </div>
+
+    <div class="tgrid">
+      <article class="tcard rv">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-brownie.jpg" alt="Torta Brownie con DDL y merengue italiano" width="584" height="468" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Brownie con DDL y merengue italiano</h3><p class="tcard-price">$35.000</p></div>
+      </article>
+      <article class="tcard rv d1">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-chocoplomo.jpg" alt="Torta Chocoplomo" width="584" height="468" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Chocoplomo</h3><p class="tcard-desc">Bizcochuelo húmedo chocolate, crema Bariloche (DDL + choco), ganache</p><p class="tcard-price">$38.000</p></div>
+      </article>
+      <article class="tcard rv d2">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-cheesecake-frutos-rojos.jpg" alt="Torta Cheesecake frutos rojos" width="578" height="462" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Cheesecake frutos rojos</h3><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv d3">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-chocotorta.jpg" alt="Torta Chocotorta" width="576" height="460" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Chocotorta</h3><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-lemon-pie.jpg" alt="Torta Lemon Pie" width="584" height="468" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Lemon Pie</h3><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv d1">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-marquise.jpg" alt="Torta Marquise" width="584" height="467" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Marquise</h3><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv d2">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-mousse.jpg" alt="Torta Mousse" width="578" height="462" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Mousse</h3><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv d3">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-pistacho.jpg" alt="Torta Pistacho" width="712" height="570" loading="lazy" decoding="async"><span class="badge badge-star">★ Premium</span></div>
+        <div class="tcard-b"><h3 class="tcard-name">Pistacho</h3><p class="tcard-price">$44.000</p></div>
+      </article>
+      <article class="tcard rv">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-key-lime-pie.jpg" alt="Torta Key Lime Pie" width="584" height="468" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Key Lime Pie</h3><p class="tcard-price">$34.000</p></div>
+      </article>
+      <article class="tcard rv d1">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-rogel.jpg" alt="Torta Rogel" width="576" height="460" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Rogel</h3><p class="tcard-desc">Finas capas de masa crocante, abundante DDL, merengue italiano</p><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv d2">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-tentacion.jpg" alt="Torta Tentación" width="584" height="468" loading="lazy" decoding="async"><span class="badge badge-star">★ Premium</span></div>
+        <div class="tcard-b"><h3 class="tcard-name">Tentación</h3><p class="tcard-desc">Base nuez, crema, DDL y frutillas</p><p class="tcard-price">$36.000</p></div>
+      </article>
+      <article class="tcard rv d3">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-tiramisu.jpg" alt="Torta Tiramisú" width="854" height="684" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Tiramisú</h3><p class="tcard-price">$33.000</p></div>
+      </article>
+      <article class="tcard rv">
+        <div class="tcard-img"><img src="assets/img/tortas/torta-toffee.jpg" alt="Torta Toffee" width="854" height="684" loading="lazy" decoding="async"></div>
+        <div class="tcard-b"><h3 class="tcard-name">Toffee</h3><p class="tcard-price">$35.000</p></div>
+      </article>
+
+      <aside class="tinfo rv d1">
+        <svg class="sprig sprig-info" aria-hidden="true"><use href="#sprig"/></svg>
+        <h3 class="tinfo-t">Minicakes, tortas &amp; más.<br><em>Todo hecho en Villa Rosa.</em></h3>
+        <p class="tinfo-p">Las mismas recetas de los minicakes en torta completa. Consultá disponibilidad y tiempo de preparación por WhatsApp.</p>
+        <div class="tinfo-ctas">
+          <a href="#" onclick="openModal('encargo');return false;" class="btn btn-p btn-sm">Hacer un encargo <span aria-hidden="true">→</span></a>
+          <a href="#carta" class="btn btn-ghost btn-sm">Ver carta completa</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO PEDIR ============ -->
+<section id="pedir" class="sec sec-pedir">
+  <div class="wrap">
+    <div class="sec-head sec-head-split">
+      <div>
+        <p class="eyebrow rv">Proceso simple</p>
+        <h2 class="s2 rv d1">Tres pasos por WhatsApp.<br><em>Sin complicaciones.</em></h2>
+      </div>
+      <a href="https://wa.me/5491126352428?text=Hola%20Morata!%20%F0%9F%8E%82%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" class="btn btn-p rv d2">Hacé tu pedido ahora <span aria-hidden="true">→</span></a>
+    </div>
+    <ol class="steps">
+      <li class="step rv">
+        <div class="step-top"><span class="step-n">01</span><span class="step-icon"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span></div>
+        <h3>Elegís de la carta</h3>
+        <p>Mirás la carta completa acá en el sitio. Medialunas, scons, minicakes, desayunos. Todo con precio real.</p>
+      </li>
+      <li class="step rv d1">
+        <div class="step-top"><span class="step-n">02</span><span class="step-icon"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span></div>
+        <h3>Nos escribís por WhatsApp</h3>
+        <p>Mandás tu pedido al +011 2635-2428. En menos de 2 horas confirmamos disponibilidad y fecha.</p>
+      </li>
+      <li class="step rv d2">
+        <div class="step-top"><span class="step-n">03</span><span class="step-icon"><svg class="ico" aria-hidden="true"><use href="#i-cake"/></svg></span></div>
+        <h3>Retirás o te lo enviamos</h3>
+        <p>Pasás por Complejo 46 Plaza, o coordinamos delivery. También estamos en PedidosYa.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CARTA ============ -->
+<section id="carta" class="sec sec-carta">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Carta completa</p>
+      <h2 class="s2 rv d1">Todo lo que hacemos.<br><em>Con amor y masa madre.</em></h2>
+    </div>
+    <div class="tabs rv d2" role="tablist" aria-label="Categorías de la carta">
+      <button class="tb on" type="button" role="tab" aria-selected="true" aria-controls="tab-pan" data-tab="pan" onclick="setTab(this,'pan')">Panadería</button>
+      <button class="tb" type="button" role="tab" aria-selected="false" aria-controls="tab-mini" data-tab="mini" onclick="setTab(this,'mini')">Minicakes</button>
+      <button class="tb" type="button" role="tab" aria-selected="false" aria-controls="tab-desa" data-tab="desa" onclick="setTab(this,'desa')">Desayunos</button>
+      <button class="tb" type="button" role="tab" aria-selected="false" aria-controls="tab-cafe" data-tab="cafe" onclick="setTab(this,'cafe')">Cafetería</button>
+      <button class="tb" type="button" role="tab" aria-selected="false" aria-controls="tab-cook" data-tab="cook" onclick="setTab(this,'cook')">Dulces</button>
+      <button class="tb" type="button" role="tab" aria-selected="false" aria-controls="tab-tort" data-tab="tort" onclick="setTab(this,'tort')">Tortas grandes</button>
+      <button class="tb" type="button" role="tab" aria-selected="false" aria-controls="tab-st" data-tab="st" onclick="setTab(this,'st')">Sin TACC</button>
+    </div>
+
+    <!-- Panadería -->
+    <div class="tp on" id="tab-pan" role="tabpanel">
+      <div class="tp-aside">
+        <img src="assets/img/productos/croissant-xl.jpg" alt="Croissant XL de masa madre" width="800" height="600" loading="lazy" decoding="async">
+        <img src="assets/img/productos/scons-albahaca-queso.jpg" alt="Scons de albahaca y queso" width="800" height="599" loading="lazy" decoding="async">
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Medialuna de masa madre</div><div class="mi-bdg mm">Masa Madre</div></div><div class="mi-pr">$2.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Media docena de medialunas</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Medialuna con jamón y queso</div></div><div class="mi-pr">$5.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Croissant de masa madre XL</div><div class="mi-bdg mm">Masa Madre</div></div><div class="mi-pr">$3.200</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Croissant con jamón y queso</div></div><div class="mi-pr">$7.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Scon de queso</div><div class="mi-note">Se hornea en cada pedido — 30 min</div></div><div class="mi-pr">$2.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Scon de albahaca, oliva y queso</div><div class="mi-note">Se hornea en cada pedido — 30 min</div></div><div class="mi-pr">$2.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Scon dulce</div><div class="mi-note">Se hornean en cada pedido — 30 min</div></div><div class="mi-pr">$2.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Promo 6 scons de queso</div></div><div class="mi-pr">$14.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Promo 6 scons de albahaca</div></div><div class="mi-pr">$14.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Promo 6 scons dulces</div><div class="mi-note">Se hornean en cada pedido — 30 min</div></div><div class="mi-pr">$14.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Roll de canela</div><div class="mi-bdg pr">★ Premium</div><div class="mi-desc">Finas capas, caramelizado</div></div><div class="mi-pr">$6.000</div></div>
+      </div>
+    </div>
+
+    <!-- Minicakes -->
+    <div class="tp" id="tab-mini" role="tabpanel">
+      <div class="tp-aside">
+        <img src="assets/img/productos/mini-key-lime-pie.jpg" alt="Mini Key Lime Pie" width="800" height="600" loading="lazy" decoding="async">
+        <img src="assets/img/productos/mini-pistacho.jpg" alt="Mini Pistacho" width="750" height="562" loading="lazy" decoding="async">
+        <img src="assets/img/productos/chocotorta.jpg" alt="Chocotorta" width="800" height="600" loading="lazy" decoding="async">
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Brownie</div><div class="mi-desc">Brownie con nueces, DDL, merengue italiano y chocolate rallado · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cheesecake</div><div class="mi-desc">Base galletita, relleno de queso crema, salsa de frutos rojos · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tiramisú</div><div class="mi-desc">Vainillas con espresso, crema mascarpone, cacao espolvoreado · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Toffee</div><div class="mi-desc">Sablee cacao, crema toffee, avellanas, ganache de chocolate · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Mousse</div><div class="mi-desc">Base marquise de chocolate, dulce de leche y crema chantilly · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Lemon Pie</div><div class="mi-desc">Sablee, crema limón suave, merengue italiano y ralladura · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Key Lime Pie</div><div class="mi-desc">Base galletitas crocante, crema de lima, chantilly · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Chocotorta</div><div class="mi-desc">Chocolinas, dulce de leche y queso crema, chocolinas arriba · 8cm</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Pistacho</div><div class="mi-bdg pr">★ Premium</div><div class="mi-desc">Sablee, curd de frambuesa, ganache de pistacho, pistachos y frambuesas · 8cm</div></div><div class="mi-pr">$13.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tentación</div><div class="mi-bdg pr">★ Premium</div><div class="mi-desc">Bizcocho de nuez sin harina, DDL, crema y frutos del bosque · 12cm</div></div><div class="mi-pr">$14.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Marquise</div><div class="mi-bdg pr">★ Premium</div><div class="mi-desc">Base marquise de chocolate, dulce de leche y crema chantilly · 12cm</div></div><div class="mi-pr">$14.000</div></div>
+      </div>
+    </div>
+
+    <!-- Desayunos -->
+    <div class="tp" id="tab-desa" role="tabpanel">
+      <div class="tp-aside">
+        <img src="assets/img/productos/box-por-encargo.jpg" alt="Box por encargo" width="800" height="600" loading="lazy" decoding="async">
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Desayuno Tradicional</div><div class="mi-desc">Espresso / flat white / latte + medialuna masa madre XL</div></div><div class="mi-pr">$8.600</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Desayuno de la Casa</div><div class="mi-desc">Espresso 8oz / flat white / latte 12oz + 2 scons a elección</div></div><div class="mi-pr">$11.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Desayuno Dulce</div><div class="mi-desc">Espresso / flat white / latte + cuadrado a elección</div></div><div class="mi-pr">$13.800</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Desayuno French</div><div class="mi-desc">Café con leche + croissant de masa madre con J&amp;Q</div></div><div class="mi-pr">$14.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Desayuno Oriente</div><div class="mi-desc">Flat white / latte / espresso + tostado árabe a elección</div></div><div class="mi-pr">$14.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Desayuno Equilibrio</div><div class="mi-desc">Café + yogurt natural con frutas y granola</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Café con medialuna con J&amp;Q</div><div class="mi-desc">Espresso / flat white / latte + medialuna de masa madre con J&amp;Q</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tostado árabe con bebida fría</div><div class="mi-desc">Tostado árabe + bebida fría a elección</div></div><div class="mi-pr">$13.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tarta de zapallito con bebida</div><div class="mi-desc">Masa tradicional o integral · 320g · 12cm de diámetro</div></div><div class="mi-pr">$12.000</div></div>
+        <div class="mi mi-feat">
+          <div class="mi-inf">
+            <div class="mi-name">🎁 Desayuno Alegórico para regalar</div>
+            <div class="mi-desc">1 budín del día + brownie + 6 pepas + cookie vainilla + cuadrado + 6 chipas + 2 scons queso + 2 scons albahaca + botellita jugo</div>
+          </div>
+          <div class="mi-pr">$51.000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cafetería -->
+    <div class="tp" id="tab-cafe" role="tabpanel">
+      <div class="tp-aside">
+        <img src="assets/img/productos/latte.jpg" alt="Latte" width="800" height="600" loading="lazy" decoding="async">
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Espresso americano</div><div class="mi-desc">Doble espresso 60ml</div></div><div class="mi-pr">$4.600</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Flat White</div><div class="mi-desc">Doble espresso + leche vaporizada 180ml</div></div><div class="mi-pr">$6.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Latte</div><div class="mi-desc">Espresso + leche vaporizada 180ml</div></div><div class="mi-pr">$6.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Mocaccino</div><div class="mi-desc">Café + leche + salsa chocolate, espolvoreado con cacao</div></div><div class="mi-pr">$6.600</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Iced Latte</div><div class="mi-desc">Doble espresso + hielo + leche fría 180ml</div></div><div class="mi-pr">$6.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Iced Mocaccino</div><div class="mi-desc">Doble espresso + hielo + leche fría + salsa chocolate</div></div><div class="mi-pr">$6.600</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Affogato ✨</div><div class="mi-desc">Bocha de helado americana + espresso — la sorpresa de la carta</div></div><div class="mi-pr">$6.900</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Yogurt natural, frutas y granola</div><div class="mi-desc">300cc · frutas naturales, yogurt sin endulzar, miel y granola</div></div><div class="mi-pr">$5.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Licuado de banana</div></div><div class="mi-pr">$7.200</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Smoothie frutilla con sorbete</div></div><div class="mi-pr">$7.700</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Smoothie limón con sorbete</div></div><div class="mi-pr">$7.700</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tostado árabe J&amp;Q</div><div class="mi-desc">Pan árabe clásico o integral con jamón y queso</div></div><div class="mi-pr">$7.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Agua mineral / con gas</div><div class="mi-desc">500ml</div></div><div class="mi-pr">$3.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Pepsi / Pepsi Black / 7UP / 7UP Free</div><div class="mi-desc">Lata 354ml</div></div><div class="mi-pr">$3.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Jugo Estancia Los Naranjos</div><div class="mi-desc">Limón-menta-jengibre / Naranja-frutilla / Pomelo / Naranja-durazno · 500ml</div></div><div class="mi-pr">$3.600</div></div>
+      </div>
+    </div>
+
+    <!-- Dulces -->
+    <div class="tp" id="tab-cook" role="tabpanel">
+      <div class="tp-aside">
+        <img src="assets/img/productos/cookie-chocolate.jpg" alt="Cookie chocolate" width="800" height="601" loading="lazy" decoding="async">
+        <img src="assets/img/productos/budin-limon.jpg" alt="Budín de limón" width="800" height="600" loading="lazy" decoding="async">
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cookie pistacho</div><div class="mi-desc">Con frambuesa, chocolate blanco y pistacho · 130g · 11cm</div></div><div class="mi-pr">$7.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cookie rellena DDL</div><div class="mi-desc">Vainilla rellena con dulce de leche · 80g · 12cm</div></div><div class="mi-pr">$7.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cookie chocolate con toffee</div><div class="mi-desc">Con mantequilla y crema toffee · 130g · 13cm</div></div><div class="mi-pr">$7.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cookie vainilla con chips</div><div class="mi-desc">Cookie simple · 85g · 12cm</div></div><div class="mi-pr">$6.300</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Pepas (bandeja 12 unidades)</div><div class="mi-desc">260g aprox</div></div><div class="mi-pr">$9.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Brownie con nueces</div><div class="mi-desc">180g · 10×10cm</div></div><div class="mi-pr">$7.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Brownie sin nuez</div><div class="mi-desc">125g · 10×10cm</div></div><div class="mi-pr">$7.300</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Pastafrola membrillo</div><div class="mi-desc">200g · 9×9cm</div></div><div class="mi-pr">$7.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Pastafrola batata</div><div class="mi-desc">125g · 9×9cm</div></div><div class="mi-pr">$7.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cuadrado ricota</div><div class="mi-desc">270g · 8×8cm</div></div><div class="mi-pr">$7.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cuadrado manzana</div><div class="mi-desc">195g · 9×9cm</div></div><div class="mi-pr">$7.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cuadrado de frutos secos</div><div class="mi-desc">Sablée, nueces, almendras y maní caramelizado</div></div><div class="mi-pr">$8.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Alfajor de coco y DDL</div></div><div class="mi-pr">$8.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Alfajor almendra y DDL</div></div><div class="mi-pr">$8.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Budín limón</div></div><div class="mi-pr">$12.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Budín banana</div></div><div class="mi-pr">$12.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Budín carrot con pasas y nueces</div></div><div class="mi-pr">$12.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Budín chocolate (bañado con maní)</div></div><div class="mi-pr">$12.500</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Porción budín carrot</div></div><div class="mi-pr">$4.300</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Porción budín limón con frutos rojos</div></div><div class="mi-pr">$4.300</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Chipa XL</div><div class="mi-desc">Pieza de 100g, sabor extra</div></div><div class="mi-pr">$5.200</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Chipa XL tostado</div><div class="mi-desc">Con jamón y queso</div></div><div class="mi-pr">$8.600</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Chipa de queso</div><div class="mi-desc">Esponjosos · 250g</div></div><div class="mi-pr">$13.000</div></div>
+      </div>
+    </div>
+
+    <!-- Tortas grandes -->
+    <div class="tp" id="tab-tort" role="tabpanel">
+      <div class="tp-aside">
+        <div class="tp-note">
+          <div class="tp-note-t">Tortas protagonistas — Para celebrar en grande</div>
+          <div class="tp-note-p">Las mismas recetas de los minicakes en torta completa. Consultá disponibilidad y tiempo de preparación por WhatsApp.</div>
+        </div>
+        <img src="assets/img/tortas/torta-chocoplomo.jpg" alt="Torta Chocoplomo" width="584" height="468" loading="lazy" decoding="async">
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Brownie con DDL y merengue italiano</div></div><div class="mi-pr">$35.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Chocoplomo</div><div class="mi-desc">Bizcochuelo húmedo chocolate, crema Bariloche (DDL + choco), ganache</div></div><div class="mi-pr">$38.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Cheesecake frutos rojos</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Chocotorta</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Lemon Pie</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Marquise</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Mousse</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Pistacho</div><div class="mi-bdg pr">★ Premium</div></div><div class="mi-pr">$44.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Key Lime Pie</div></div><div class="mi-pr">$34.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Rogel</div><div class="mi-desc">Finas capas de masa crocante, abundante DDL, merengue italiano</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tentación</div><div class="mi-desc">Base nuez, crema, DDL y frutillas</div><div class="mi-bdg pr">★ Premium</div></div><div class="mi-pr">$36.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Tiramisú</div></div><div class="mi-pr">$33.000</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Toffee</div></div><div class="mi-pr">$35.000</div></div>
+      </div>
+    </div>
+
+    <!-- Sin TACC -->
+    <div class="tp" id="tab-st" role="tabpanel">
+      <div class="tp-aside">
+        <div class="tp-note tp-note-st">
+          <div class="tp-note-t"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg> SIN TACC</div>
+          <div class="tp-note-p">Nuestra línea libre de gluten, hecha con el mismo cuidado artesanal. Ideal para quienes necesitan o eligen comer sin TACC.</div>
+        </div>
+      </div>
+      <div class="mg">
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Alfajor chocolate sin TACC</div><div class="mi-bdg st">Sin TACC</div></div><div class="mi-pr">$4.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Lemonie sin TACC</div><div class="mi-bdg st">Sin TACC</div><div class="mi-desc">Bocado esponjoso de limón</div></div><div class="mi-pr">$4.400</div></div>
+        <div class="mi"><div class="mi-inf"><div class="mi-name">Alfacookies sin TACC</div><div class="mi-bdg st">Sin TACC</div><div class="mi-desc">Cookie DDL + nueces</div></div><div class="mi-pr">$7.100</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA TIENDA DE MORATA ============ -->
+<section id="tienda" class="sec sec-tienda" aria-labelledby="tienda-title">
+  <svg class="sprig sprig-tienda" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <div class="sec-head sec-head-split shop-head">
+      <div class="shop-intro">
+        <p class="eyebrow rv">Morata · Para llevar</p>
+        <h2 class="s2 rv d1" id="tienda-title">El sabor de siempre. <em>Ahora también en casa.</em></h2>
+        <p class="shop-lead rv d2">Una selección de nuestros favoritos para disfrutar el ritual de Morata donde quieras.</p>
+      </div>
+      <button class="btn btn-choco shop-cart-link rv d2" type="button" data-cart-open aria-haspopup="dialog" aria-controls="cart" aria-label="Abrir carrito, 0 productos">
+        <svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg>
+        Ver mi carrito
+        <span class="cart-count cart-count-inline" data-cart-count aria-hidden="true" hidden>0</span>
+      </button>
+    </div>
+
+    <div class="sfilters rv d1" id="shopFilters" role="group" aria-label="Filtrar productos de la tienda">
+      <button class="sf on" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button class="sf" type="button" data-filter="cafe-dulces" aria-pressed="false">Café y dulces</button>
+      <button class="sf" type="button" data-filter="accesorios" aria-pressed="false">Accesorios</button>
+    </div>
+    <p class="sr-only" id="shopStatus" role="status" aria-live="polite"></p>
+
+    <div class="sgrid" id="shopGrid">
+      <noscript><p class="shop-noscript">La tienda necesita JavaScript para mostrar los productos y el carrito. Mientras tanto, podés pedir por <a href="https://wa.me/5491126352428" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p></noscript>
+    </div>
+
+    <p class="shop-note rv">
+      <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>
+      <span>Catálogo conceptual de un prototipo académico. Disponibilidad, precio final y forma de entrega se confirman por WhatsApp: no se realiza ningún pago en el sitio.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ RESEÑAS ============ -->
+<section id="testi" class="sec sec-testi">
+  <svg class="sprig sprig-testi" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Reseñas reales</p>
+      <h2 class="s2 rv d1">5.0 ★ en Google.<br><em>100% de cinco estrellas.</em></h2>
+    </div>
+    <div class="tg">
+      <figure class="tc rv">
+        <div class="tc-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="tc-q">"El croissant de masa madre y el iced mocha: ¡ESPECTACULAR!"</blockquote>
+        <figcaption class="tc-a"><div class="tc-av" aria-hidden="true">R</div><div><div class="tc-nm">Rodo A</div><div class="tc-mt">Local Guide · 96 reseñas · Google</div></div></figcaption>
+      </figure>
+      <figure class="tc rv d1">
+        <div class="tc-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="tc-q">"Los scons de queso y albahaca son INCREÍBLES. Buenos precios."</blockquote>
+        <figcaption class="tc-a"><div class="tc-av" aria-hidden="true">P</div><div><div class="tc-nm">Pablo Escudero</div><div class="tc-mt">Google</div></div></figcaption>
+      </figure>
+      <figure class="tc rv d2">
+        <div class="tc-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="tc-q">"La Torta Tentación es fantástica. Definitivamente vuelvo pronto."</blockquote>
+        <figcaption class="tc-a"><div class="tc-av" aria-hidden="true">A</div><div><div class="tc-nm">Ailen Reyes Duarte</div><div class="tc-mt">Google</div></div></figcaption>
+      </figure>
+      <figure class="tc rv">
+        <div class="tc-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="tc-q">"El budín de limón es espectacular. ¡Volvemos!"</blockquote>
+        <figcaption class="tc-a"><div class="tc-av" aria-hidden="true">N</div><div><div class="tc-nm">Natalia Escudero</div><div class="tc-mt">Google</div></div></figcaption>
+      </figure>
+      <figure class="tc rv d1">
+        <div class="tc-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="tc-q">"Excelente sabor, calidad, delivery a tiempo y coordinación. Muy recomendado."</blockquote>
+        <figcaption class="tc-a"><div class="tc-av" aria-hidden="true">M</div><div><div class="tc-nm">Maria Agustina Martinez</div><div class="tc-mt">Google</div></div></figcaption>
+      </figure>
+      <figure class="tc rv d2">
+        <div class="tc-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="tc-q">"La chipa está buenísima, los scons de queso son fantásticos, los budines son suaves y ricos, y el iced mocha es el acompañamiento perfecto."</blockquote>
+        <figcaption class="tc-a"><div class="tc-av" aria-hidden="true">A</div><div><div class="tc-nm">Alejandra Ruiz</div><div class="tc-mt">Google</div></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENCARGO / CONSULTA ============ -->
+<section id="encargo" class="sec sec-encargo">
+  <div class="wrap">
+    <div class="enc-grid">
+      <figure class="enc-photo rv">
+        <img src="assets/img/productos/box-por-encargo.jpg" alt="Box por encargo" width="800" height="600" decoding="async">
+      </figure>
+      <div class="enc-body">
+        <p class="eyebrow rv">¿Querés encargar?</p>
+        <h2 class="s2 rv d1">Dos caminos,<br><em>sin vueltas.</em></h2>
+        <div class="inq-g">
+          <div class="inq-c rv" role="button" tabindex="0" onclick="openModal('encargo')">
+            <div class="inq-ic"><svg class="ico" aria-hidden="true"><use href="#i-cake"/></svg></div>
+            <div class="inq-ti">Encargo personalizado</div>
+            <div class="inq-de">Torta, mesa dulce, desayuno especial. Te ayudamos a armar tu pedido paso a paso.</div>
+            <span class="btn btn-p btn-sm inq-ac">Empezar encargo <span aria-hidden="true">→</span></span>
+          </div>
+          <div class="inq-c rv d1" role="button" tabindex="0" onclick="openModal('pregunta')">
+            <div class="inq-ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></div>
+            <div class="inq-ti">Tengo una pregunta</div>
+            <div class="inq-de">Horarios, delivery, ingredientes, cómo llegar. Tocás y te abrimos WhatsApp directo.</div>
+            <span class="btn btn-choco btn-sm inq-ac">Ver preguntas frecuentes <span aria-hidden="true">→</span></span>
+          </div>
+        </div>
+        <p class="enc-tel rv d2">
+          <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+          También podés llamarnos: <a href="tel:01126352428">011 2635-2428</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section id="ctab">
+  <div class="ctab-in wrap">
+    <svg class="sprig sprig-cta" aria-hidden="true"><use href="#sprig"/></svg>
+    <h2>Hacé tu pedido.<br><em>Te esperamos.</em></h2>
+    <p>Lunes a sábado 8:00–19:00 · Domingos 9:00–18:00 · Complejo 46 Plaza, Villa Rosa</p>
+    <a href="https://wa.me/5491126352428?text=Hola%20Morata!%20%F0%9F%8E%82%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" class="btn btn-p btn-lg">Hacer mi pedido por WhatsApp <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="ft-in wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-logo"><img src="assets/img/logo-morata.png" alt="" width="360" height="360" loading="lazy" decoding="async"></div>
+        <div>
+          <div class="ft-wm">MORATA</div>
+          <div class="ft-tag">Pastelería artesanal · Villa Rosa, Pilar</div>
+          <div class="ft-hrs">
+            Lunes a sábado · 8:00 a 19:00<br>
+            Domingos · 9:00 a 18:00
+          </div>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <a href="tel:01126352428">011 2635-2428</a>
+        <a href="mailto:pasteleriamorata@gmail.com" target="_blank" rel="noopener noreferrer">pasteleriamorata@gmail.com</a>
+        <a href="https://www.instagram.com/morata.pasteleria?igsh=cGt5d2xvMzFhdzBs" target="_blank" rel="noopener noreferrer">@morata.pasteleria</a>
+        <a href="https://wa.me/5491126352428" target="_blank" rel="noopener noreferrer">WhatsApp directo</a>
+      </div>
+      <div class="ft-col">
+        <h4>Cómo llegar</h4>
+        <p>Complejo 46 Plaza<br>R. Caamaño 1060, B1631<br>Villa Rosa, Partido de Pilar</p>
+        <a href="https://share.google/KmRZvrc5cs69ukEpt" target="_blank" rel="noopener noreferrer">Ver en Google Maps →</a>
+        <a href="https://www.pedidosya.com.ar/restaurantes/pilar/pasteleria-morata-82e0938b-acdf-4d14-b270-24671cd1322e-menu" target="_blank" rel="noopener noreferrer">PedidosYa →</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2026 Morata Pastelería · Hecho en Villa Rosa, no en una cadena.</p>
+      <a href="https://share.google/ih4hRtU31T4EvFFaO" target="_blank" rel="noopener noreferrer">Ver reseñas en Google →</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a id="wa" href="https://wa.me/5491126352428?text=Hola%20Morata!%20%F0%9F%8E%82%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" aria-label="Pedí acá por WhatsApp">
+  <span class="wa-ic"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg></span>
+  <span class="wa-t">Pedí acá</span>
+</a>
+
+<!-- CARRITO (panel lateral) -->
+<div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+<aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+  <header class="cart-head">
+    <div>
+      <h2 class="cart-title" id="cart-title">Tu carrito</h2>
+      <p class="cart-sub" id="cartSub">0 productos</p>
+    </div>
+    <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar carrito"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </header>
+  <div class="cart-body" id="cartBody">
+    <ul class="cart-list" id="cartList" hidden></ul>
+    <div class="cart-empty" id="cartEmpty">
+      <span class="cart-empty-ic" aria-hidden="true"><svg class="ico"><use href="#i-bag"/></svg></span>
+      <p class="cart-empty-t">Tu carrito está vacío</p>
+      <p class="cart-empty-p">Sumá algo rico de la tienda de Morata para armar tu pedido.</p>
+      <a href="#tienda" class="btn btn-p btn-sm" data-cart-close>Ver la tienda <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <footer class="cart-foot" id="cartFoot" hidden>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <p class="cart-note">Esto no es una compra: te respondemos por WhatsApp para confirmar disponibilidad y cómo retirarlo o recibirlo.</p>
+    <a class="btn btn-p cart-checkout" id="cartCheckout" href="#" target="_blank" rel="noopener noreferrer">Finalizar pedido <span aria-hidden="true">→</span></a>
+    <button class="btn cart-continue" type="button" data-cart-close>Seguir comprando</button>
+  </footer>
+</aside>
+<div class="sr-only" id="cartLive" role="status" aria-live="polite"></div>
+
+<!-- MODAL -->
+<div id="mo" role="dialog" aria-modal="true" aria-labelledby="mo-title">
+  <div class="modal">
+    <button class="mcl" type="button" onclick="closeModal()" aria-label="Cerrar">✕</button>
+    <div class="mst on" id="ms-choose">
+      <div class="mtt" id="mo-title">¿En qué te ayudamos?</div>
+      <div class="msb">Elegí una opción para continuar.</div>
+      <div class="chips">
+        <button class="chip" type="button" onclick="setStep('encargo')">🎂 Quiero hacer un encargo</button>
+        <button class="chip" type="button" onclick="setStep('pregunta')">💬 Tengo una pregunta</button>
+      </div>
+    </div>
+    <div class="mst" id="ms-encargo">
+      <div class="mtt">Encargo personalizado</div>
+      <div class="msb">Completá los datos y te generamos el mensaje de WhatsApp.</div>
+      <label class="fl" for="f-tipo">Tipo de producto</label>
+      <select class="ff" id="f-tipo"><option>Minicake</option><option>Torta</option><option>Mesa dulce</option><option>Desayuno Alegórico</option><option>Scons</option><option>Otro</option></select>
+      <label class="fl" for="f-fecha">Fecha del evento</label>
+      <input type="date" class="ff" id="f-fecha">
+      <div class="fr">
+        <div><label class="fl" for="f-nombre">Nombre</label><input class="ff" id="f-nombre" placeholder="Tu nombre" type="text"></div>
+        <div><label class="fl" for="f-tel">Teléfono</label><input class="ff" id="f-tel" placeholder="Ej: 11 1234-5678" type="tel"></div>
+      </div>
+      <label class="fl" for="f-prefs">Sabores o preferencias</label>
+      <textarea class="ff" id="f-prefs" rows="3" placeholder="Ej: chocolate y maracuyá, para 10 personas..."></textarea>
+      <div class="ftog">
+        <input type="checkbox" id="f-tacc">
+        <label for="f-tacc">Necesito opciones sin TACC</label>
+      </div>
+      <div class="mft">
+        <button class="mcc" type="button" onclick="setStep('choose')">← Volver</button>
+        <button class="btn btn-p" type="button" onclick="sendEncargo()">Enviar por WhatsApp <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+    <div class="mst" id="ms-pregunta">
+      <div class="mtt">Pregunta rápida</div>
+      <div class="msb">Tocá una opción y te abrimos WhatsApp con el mensaje listo.</div>
+      <div class="chips" id="chips-preguntas"></div>
+      <div class="mft">
+        <button class="mcc" type="button" onclick="setStep('choose')">← Volver</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/video.js"></script>
+<script src="js/shader.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
